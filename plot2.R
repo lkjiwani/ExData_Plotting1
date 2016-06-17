@@ -12,5 +12,5 @@ str(data_for_analysis)
 
 Date_Time <- strptime(paste(data_for_analysis$Date, data_for_analysis$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 png(filename = "plot2.png", width = 480, height = 480)
-with(data_for_analysis, plot(Date_Time, as.numeric(Global_active_power)/500, type = "l", xlab="", ylab="Global Active Power (kilowatts)"))
+with(data_for_analysis, plot(Date_Time, as.numeric(Global_active_power), type = "l", xlab="", ylab="Global Active Power (kilowatts)"))
 dev.off()

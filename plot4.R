@@ -15,8 +15,8 @@ png(filename = "plot4.png", width = 480, height = 480)
 par(mfcol = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0), cex = 0.7)
 
 # plot(1,1)
-new_Time <- c(as.numeric(data_for_analysis$Time[1:1440]), as.numeric(data_for_analysis$Time[1440])+as.numeric(data_for_analysis$Time[1441:2880]))
-with(data_for_analysis, plot(Date_Time, as.numeric(Global_active_power)/500, type = "l", xlab = "", ylab = "Global_active_power"))
+#new_Time <- c(as.numeric(data_for_analysis$Time[1:1440]), as.numeric(data_for_analysis$Time[1440])+as.numeric(data_for_analysis$Time[1441:2880]))
+with(data_for_analysis, plot(Date_Time, as.numeric(Global_active_power), type = "l", xlab = "", ylab = "Global_active_power"))
 
 
 # plot(2, 1)
@@ -27,11 +27,11 @@ legend("topright", lwd = 1, lty = c(1, 1, 1), col = c("black","red", "blue"), le
 
 
 # plot(1,2)
-with(data_for_analysis, plot(Date_Time, as.numeric(Voltage)/500, type = "l", xlab = "datetime", ylab = "Voltage"))
+with(data_for_analysis, plot(Date_Time, as.numeric(Voltage), type = "l", xlab = "datetime", ylab = "Voltage"))
 
 
 #plot(2, 2)
-with(data_for_analysis, plot(Date_Time, as.numeric(Global_reactive_power)/500, type = "l", xlab = "datetime", ylab = "Global_reactive_power"))
+with(data_for_analysis, plot(Date_Time, as.numeric(Global_reactive_power), type = "l", xlab = "datetime", ylab = "Global_reactive_power"))
 
 
 dev.off()
